@@ -4,12 +4,12 @@
         		<div class="row align-items-center">
         			<!-- start copyright -->
         			<div class="col-lg-4 col-md-5 text-small text-center alt-font sm-margin-15px-bottom text-white-2">
-        				&COPY; 2019 POFO is Powered by <a href="http://www.themezaa.com" class="text-white-2" target="_blank" title="ThemeZaa">ThemeZaa</a>.
+        				&COPY; 2020 POFO is Powered by <a href="<?php echo site_url() ?>" class="text-white-2" target="_blank" title="ThemeZaa"></a>.
         			</div>
         			<!-- end copyright -->
         			<!-- start logo -->
         			<div class="col-lg-4 col-md-2 text-center sm-margin-10px-bottom">
-        				<a href="index.html"><img class="footer-logo" src="<?php bloginfo('template_directory') ?>/images/logo-white.png" data-rjs="<?php bloginfo('template_directory') ?>/images/logo-white@2x.png" alt="Pofo"></a>
+        				<a href="<?php echo site_url() ?>"><img class="footer-logo" src="<?php bloginfo('template_directory') ?>/images/logo-white.png" data-rjs="<?php bloginfo('template_directory') ?>/images/logo-white@2x.png" alt="Pofo"></a>
         			</div>
         			<!-- end logo -->
         			<!-- start social media -->

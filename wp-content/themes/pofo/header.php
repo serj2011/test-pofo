@@ -45,7 +45,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/responsive.css" />
 	<!--[if IE]>
             <script src="js/html5shiv.js"></script>
-        <![endif]-->
+		<![endif]-->
 </head>
 
 <body class="bg-background-fade">

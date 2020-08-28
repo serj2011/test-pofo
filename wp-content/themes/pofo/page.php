@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<script src="/wp-content/themes/pofo/contact.js"></script>
 <!-- start hero section -->
 <section class="wow fadeIn p-0 cover-background color-code" data-color="1" style="background-image: url('<?php the_field('picture_1'); ?>');">
     <div class="container full-screen position-relative">
@@ -371,7 +371,21 @@
                 <div class="text-extra-small letter-spacing-3 alt-font text-white-2 text-uppercase margin-70px-bottom md-margin-50px-bottom sm-margin-30px-bottom d-inline-block">Fill out the form and we'll be in touch soon!</div>
             </div>
         </div>
-        <form id="contact-form" action="javascript:void(0)" method="post">
+
+        <form id="contact" action="/wp-content/themes/pofo/mail.php" method="post">
+            <div id="note"></div>
+            <div class="row justify-content-center"" id=" fields">
+                <div class="col-12 col-lg-8 input-border-white text-center">
+                    <div id="success-contact-form" class="mx-0"></div>
+                    <input type="text" name="name" id="author" placeholder="Name*" class="input-border-bottom border-white-light" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail*" class="input-border-bottom border-white-light" required>
+                    <input type="text" name="sub" id="url" placeholder="Subject" class="input-border-bottom border-white-light" required>
+                    <textarea name="message" cols="1" rows="10" id="comment" class="input-border-bottom border-white-light" placeholder="Your Message" required></textarea>
+                    <button type="submit" id="submit" class="go btn btn-very-small btn-transparent-white sm-margin-15px-top">send message</button>
+                </div>
+            </div>
+        </form>
+        <!-- <form id="contact-form" action="javascript:void(0)" method="post">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8 input-border-white text-center">
                     <div id="success-contact-form" class="mx-0"></div>
@@ -382,7 +396,7 @@
                     <button id="contact-us-button" type="submit" class="btn btn-very-small btn-transparent-white sm-margin-15px-top">send message</button>
                 </div>
             </div>
-        </form>
+        </form> -->
     </div>
 </section>
 <!-- end contact section -->
