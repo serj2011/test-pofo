@@ -56,7 +56,7 @@
 			<div class="container nav-header-container">
 				<!-- start logo -->
 				<div class="center-logo">
-					<a href="index.html" title="Pofo" class="logo"><img src="<?php bloginfo('template_directory') ?>/images/logo.png" data-rjs="<?php bloginfo('template_directory') ?>/images/logo@2x.png" class="logo-dark" alt="Pofo"><img src="<?php bloginfo('template_directory') ?>/images/logo-full-white.png" data-rjs="<?php bloginfo('template_directory') ?>/images/logo-full-white@2x.png" alt="Pofo" class="logo-light default"></a>
+					<a href="<?php echo site_url() ?>" title="Pofo" class="logo"><img src="<?php bloginfo('template_directory') ?>/images/logo.png" data-rjs="<?php bloginfo('template_directory') ?>/images/logo@2x.png" class="logo-dark" alt="Pofo"><img src="<?php bloginfo('template_directory') ?>/images/logo-full-white.png" data-rjs="<?php bloginfo('template_directory') ?>/images/logo-full-white@2x.png" alt="Pofo" class="logo-light default"></a>
 				</div>
 				<!-- end logo -->
 				<div class="col col-lg-12 accordion-menu">

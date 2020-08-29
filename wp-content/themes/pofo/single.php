@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -10,31 +11,38 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<!-- end page title section -->
 
-			get_template_part( 'template-parts/content', get_post_type() );
+<!-- start post content section -->
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'pofo' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'pofo' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+<section>
+	<div class="container">
+		<div class="row">
+			<main class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom pl-0 md-no-padding-right">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<div class="col-12 blog-post-content margin-60px-bottom sm-margin-30px-bottom text-center">
+							<div class="blog-image"><?php the_post_thumbnail(array(1200, 752)) ?></div>
+							<div class="blog-text border-all d-inline-block width-100">
+								<div class="content padding-50px-all sm-padding-20px-all">
+									<div class="text-extra-dark-gray text-uppercase alt-font text-large font-weight-600 margin-15px-bottom d-block text-center" title="<?php the_title_attribute(); ?>"><?php the_title(); ?>
+									</div>
+									<p class="m-0"><?php the_content() ?></p>
+								</div>
+								<div class="text-medium-gray text-extra-small margin-5px-bottom text-uppercase alt-font"><span>Posted on <?php echo get_the_date(); ?>
+										<a class="text-medium-gray "><?php the_category(',', ''); ?></a></span>
+								</div>
+							</div>
+						</div>
+					<?php endwhile;  ?>
+				<?php else : ?>
+				<?php endif; ?>
+		</div>
+		</main>
+	</div>
+	</div>
+</section>
+<!-- end blog content section -->
 <?php
-get_sidebar();
 get_footer();
